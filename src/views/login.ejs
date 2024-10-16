@@ -1,0 +1,49 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center text-light">Login</h1>
+      <p class="text-center text-light">Crie sua conta abaixo ou realize o login.</p>
+      <%- include('includes/messages') %>
+
+      <div class="bg-white row">
+          <form class="col-lg my-5" action="/login/register" method="POST">
+            <h4 class="text-center">Cadastro</h4>
+            <p class="text-center">Registre-se abaixo</p>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>"> 
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Email" name="email">
+            </div>
+            <div class="form-group">
+              <label>Senha</label>
+              <input type="password" class="form-control" placeholder="Senha" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Cria minha conta</button>
+          </form>
+    
+          <form class="col-lg my-5" action="/login/logon" method="POST">
+            <h4 class="text-center">Entrar</h4>
+            <p class="text-center">Realize o login abaixo</p>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </form>
+      </div>
+
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>

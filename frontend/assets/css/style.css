@@ -1,0 +1,13 @@
+.clock{
+    width: 100%;
+    border-style: none;
+    color: black;
+    background-color: white;
+    pointer-events: none;
+    letter-spacing: 10px;
+}
+
+.clockOuts {
+    text-align: end;
+    text-indent: 5px;
+}

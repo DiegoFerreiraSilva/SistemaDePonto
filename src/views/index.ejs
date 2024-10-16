@@ -1,0 +1,32 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center text-light">Sistema de Ponto</h1>
+      <% if(user) { %>
+        <p class="text-center text-light">Caso tenham mais de quatro pontos registrados em um dia solicite a correção.</p>
+        <p class="text-center text-light">Abaixo os seus pontos registrados.</p>
+        <div class="responsive-table bg-white">
+            <table class="table my-3">
+              <!-- Exibindo as tabelas de ponto do usuário logado -->
+              <% pontos.forEach(ponto => { %>
+                <tr>
+                  <td><b><%= ponto.date %></b></td>
+                  <td class="clockOuts"><%= ponto.pontos.join(' - ') %></td>
+                </tr>
+              <% }) %>
+            </table>
+        </div>
+      <% } else { %>
+        <p class="text-center text-light">Você precisa realizar login para verificar seus pontos batidos.</p>
+      <% } %>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer')%>
+

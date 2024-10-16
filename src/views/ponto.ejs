@@ -1,0 +1,24 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center text-light">Ponto</h1>
+      <p class="text-center text-light">Bata seus horário de entrada e saída abaixo</p>
+      <%- include('includes/messages') %>
+
+      <div class="bg-white row">
+          <form class="col-lg my-5" action="/ponto/pontoMarcado" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <input type ="hidden" class="form-control" name="email" value="<%= userId %>"/>
+            <input type="text" class="display-1 text-center clock" name="pontos"></input>
+            <div class="text-center"><button type="submit" class="btn btn-primary">Bater ponto</button></div>
+          </form>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer') %>
