@@ -1,6 +1,10 @@
 Sistema de Ponto Eletrônico:
 Este é um sistema de ponto eletrônico desenvolvido utilizando as tecnologias Express.js no backend, Mongoose para modelar os dados no MongoDB, e Webpack para o empacotamento dos arquivos JavaScript e CSS do frontend.
 
+Inicizalição do Sistema
+- No terminal basta digitar "npm start" e acessar o link informado
+- Necessário adicionar uma ConnectionString gratuita com o mongoDB no arquivo server.js linha 49
+
 Funcionalidades:
 - Cadastro de funcionários
 - Registro de entradas e saídas de funcionários
