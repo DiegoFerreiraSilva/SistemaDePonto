@@ -5,7 +5,7 @@ Este é um sistema de ponto eletrônico desenvolvido utilizando as tecnologias E
 - No terminal basta digitar "npm start" e acessar o link informado
 - Necessário adicionar uma ConnectionString gratuita com o mongoDB no arquivo server.js linha 49 para o funcionamento do sistema
 
-Funcionalidades:
+# Funcionalidades
 - Cadastro de funcionários
 - Registro de entradas e saídas de funcionários
 - Visualização do histórico de pontos registrados
@@ -14,20 +14,20 @@ Funcionalidades:
 - Gerenciamento de dados com MongoDB
 - Empacotamento dos arquivos frontend com Webpack
 
-Tecnologias Utilizadas:
+# Tecnologias Utilizadas
 - Express.js: Framework minimalista para criação do servidor e rotas.
 - Mongoose: ODM (Object Data Modeling) para modelar e manipular dados do MongoDB.
 - MongoDB: Banco de dados NoSQL utilizado para armazenar os dados do sistema de ponto.
 - Webpack: Utilizado para empacotamento e otimização dos arquivos estáticos (JavaScript, CSS, etc.).
 - EJS: Template engine para gerar o HTML dinâmico no frontend.
 
-Requisitos:
+# Requisitos
 - Node.js (v12 ou superior)
 - MongoDB (local ou em uma instância na nuvem)
 - NPM ou Yarn para gerenciamento de pacotes
 
 
-Funcionalidades em Desenvolvimento:
+# Funcionalidades em Desenvolvimento
 - Separação de conta Funcionário e Supervisor
 - Tornar criações de conta disponível apenas a uma conta Admin
 - Separar pontos batidos por mês e ano a fim de evitar uma poluição visual na página principal
